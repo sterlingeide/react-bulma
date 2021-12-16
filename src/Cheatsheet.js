@@ -3,6 +3,44 @@ import './Cheatsheet.css';
 import './Prism.css';
 
 
+const snippetList = [
+    {
+        name: 'char',
+        properties: 'Is a character',
+        example: "let char = 'a'"
+    },
+    {
+        name: 'int',
+        properties: 'Is an integer',
+        example: 'let int = 3'
+    },
+    {
+        name: 'float',
+        properties: 'Is a number with a decimal',
+        example: 'let float = 2.4'
+    },
+]
+
+const displaySnippetList = snippetList.map((c, idx) => {
+    return (
+        <div className="box">
+            <h4 id="const" className="title is-3">{c.name}</h4>
+            <article className="message is-primary">
+                <span className="icon has-text-primary">
+                    <i className="fab fa-js"></i>
+                </span>
+                <div className="message-body">
+                    {c.properties}
+                </div>
+            </article>
+            <pre><code className="language-javascript">{c.example}</code></pre>
+        </div>
+    );
+})
+
+
+
+
 class Cheatsheet extends Component {
     render() {
         return (
@@ -91,6 +129,7 @@ class Cheatsheet extends Component {
                                         </article>
                                         <pre><code className="language-javascript">let i = 0;</code></pre>
                                     </div>
+                                    {displaySnippetList}
                                     <h3 className="title is-3">More to Come...</h3>
                                     <div className="box">
                                         <h4 id="lorem" className="title is-4">More to come...</h4>
@@ -218,21 +257,21 @@ class Cheatsheet extends Component {
                             </div>
                         </div>
                     </section>
-                    <hr/>
-                    <div className ="columns is-mobile is-centered">
-                    <div className ="field is-grouped is-grouped-multiline">
-                    <div className ="control">
-                    <div className ="tags has-addons"><a className ="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">Bulma Templates</a>
-                    <span className ="tag is-info">MIT license</span>
-                    </div>
-                    </div>
-                    <div className ="control">
-                    <div className ="tags has-addons">
-                    <span className ="tag is-dark">based on a pen</span>
-                    <span className ="tag has-addons is-warning"><a href="https://codepen.io/melanieseltzer/pen/odOXWM"><i className ="fab fa-lg fa-codepen"></i></a></span>
-                    </div>
-                    </div>
-                    </div>
+                    <hr />
+                    <div className="columns is-mobile is-centered">
+                        <div className="field is-grouped is-grouped-multiline">
+                            <div className="control">
+                                <div className="tags has-addons"><a className="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">Bulma Templates</a>
+                                    <span className="tag is-info">MIT license</span>
+                                </div>
+                            </div>
+                            <div className="control">
+                                <div className="tags has-addons">
+                                    <span className="tag is-dark">based on a pen</span>
+                                    <span className="tag has-addons is-warning"><a href="https://codepen.io/melanieseltzer/pen/odOXWM"><i className="fab fa-lg fa-codepen"></i></a></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
