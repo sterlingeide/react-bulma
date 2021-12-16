@@ -76,9 +76,9 @@ class Cheatsheet extends Component {
                                         categories
                                     </p>
                                     <ul className="menu-list">
-                                        <li className="is-right"><a href="#const" className="is-active"><i className="fab fa-css3-alt"></i> CSS</a></li>
-                                        <li><a href="#let" className="is-active"><i className="fab fa-js"></i> JS</a></li>
-                                        <li><a href="#let" className="is-active"><i className="fab fa-html5"></i> HTML</a></li>
+                                        <li className="is-right" title="CSS"><a href="#const" className="is-active"><i className="fab fa-css3-alt"></i> CSS</a></li>
+                                        <li title="JS"><a href="#let" className="is-active"><i className="fab fa-js"></i> JS</a></li>
+                                        <li title="HTML"><a href="#let" className="is-active"><i className="fab fa-html5"></i> HTML</a></li>
                                     </ul>
                                     <p className="menu-label">
                                         More to read...
