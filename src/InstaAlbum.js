@@ -21,43 +21,43 @@ const instaList = [
 
 const displayInstaList = instaList.map((c, idx) => {
     return (
-        <div class="card" key={idx}>
-            <div class="header">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
+        <div className="card" key={idx}>
+            <div className="header">
+                <div className="media">
+                    <div className="media-left">
+                        <figure className="image is-48x48">
                             <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
                         </figure>
                     </div>
-                    <div class="media-content">
-                        <p class="title is-4">{c.name}</p>
-                        <p class="subtitle is-6">{c.at}</p>
+                    <div className="media-content">
+                        <p className="title is-4">{c.name}</p>
+                        <p className="subtitle is-6">{c.at}</p>
                     </div>
                 </div>
             </div>
-            <div class="card-image">
-                <figure class="image is-4by3">
+            <div className="card-image">
+                <figure className="image is-4by3">
                     <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
                 </figure>
             </div>
-            <div class="card-content">
-                <div class="level is-mobile">
-                    <div class="level-left">
-                        <div class="level-item has-text-centered">
+            <div className="card-content">
+                <div className="level is-mobile">
+                    <div className="level-left">
+                        <div className="level-item has-text-centered">
                             <a href="">
-                                <i class="material-icons">favorite_border</i>
+                                <i className="material-icons">favorite_border</i>
                             </a>
                         </div>
-                        <div class="level-item has-text-centered">
+                        <div className="level-item has-text-centered">
                             <div>
                                 <a href="">
-                                    <i class="material-icons">chat_bubble_outline</i>
+                                    <i className="material-icons">chat_bubble_outline</i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="content">
+                <div className="content">
                     <p>
                         <strong>{c.likes} Likes</strong>
                     </p>
@@ -66,21 +66,21 @@ const displayInstaList = instaList.map((c, idx) => {
                     <a href="#">#css</a>
                     <a href="#">#responsive</a>
                     <br />
-                    <time datetime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
+                    <time dateTime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
                 </div>
             </div>
-            <div class="card-footer">
-                <div class="columns is-mobile">
-                    <div class="column is-11">
-                        <div class="field">
-                            <div class="control">
-                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
+            <div className="card-footer">
+                <div className="columns is-mobile">
+                    <div className="column is-11">
+                        <div className="field">
+                            <div className="control">
+                                <input className="input is-medium" type="text" placeholder="Add a comment . . ." />
                             </div>
                         </div>
                     </div>
-                    <div class="column has-text-centered">
-                        <button class="button">
-                            <i class="material-icons">more_horiz</i>
+                    <div className="column has-text-centered">
+                        <button className="button">
+                            <i className="material-icons">more_horiz</i>
                         </button>
                     </div>
                 </div>
@@ -95,73 +95,73 @@ class InstaAlbum extends Component {
     render() {
         return (
             <div>
-                <div class="navbar is-inline-flex is-transparent">
-                    <div class="navbar-brand">
-                        <a class="navbar-item">
+                <div className="navbar is-inline-flex is-transparent">
+                    <div className="navbar-brand">
+                        <a className="navbar-item">
                             <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma" />
                         </a>
                     </div>
-                    <div class="navbar-menu">
-                        <div class="navbar-item">
-                            <div class="control has-icons-left">
-                                <input class="input is-small has-text-centered" type="text" placeholder="search" />
-                                <span class="icon is-left is-small">
-                                    <i class="material-icons">search</i>
+                    <div className="navbar-menu">
+                        <div className="navbar-item">
+                            <div className="control has-icons-left">
+                                <input className="input is-small has-text-centered" type="text" placeholder="search" />
+                                <span className="icon is-left is-small">
+                                    <i className="material-icons">search</i>
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item is-flex-touch">
-                        <a class="navbar-item">
-                            <i class="material-icons">explore</i>
+                    <div className="navbar-item is-flex-touch">
+                        <a className="navbar-item">
+                            <i className="material-icons">explore</i>
                         </a>
-                        <a class="navbar-item">
-                            <i class="material-icons">favorite_border</i>
+                        <a className="navbar-item">
+                            <i className="material-icons" title="favorite_border">favorite_border</i>
                         </a>
-                        <a class="navbar-item">
-                            <i class="material-icons">person_outline</i>
+                        <a className="navbar-item">
+                            <i className="material-icons">person_outline</i>
                         </a>
                     </div>
                 </div>
-                <div class="columns body-columns">
-                    <div class="column is-half is-offset-one-quarter">
-                        <div class="card">
-                            <div class="header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-48x48">
+                <div className="columns body-columns">
+                    <div className="column is-half is-offset-one-quarter">
+                        <div className="card">
+                            <div className="header">
+                                <div className="media">
+                                    <div className="media-left">
+                                        <figure className="image is-48x48">
                                             <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
                                         </figure>
                                     </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">John Smith</p>
-                                        <p class="subtitle is-6">@johnsmith</p>
+                                    <div className="media-content">
+                                        <p className="title is-4">John Smith</p>
+                                        <p className="subtitle is-6">@johnsmith</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-image">
-                                <figure class="image is-4by3">
+                            <div className="card-image">
+                                <figure className="image is-4by3">
                                     <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
                                 </figure>
                             </div>
-                            <div class="card-content">
-                                <div class="level is-mobile">
-                                    <div class="level-left">
-                                        <div class="level-item has-text-centered">
+                            <div className="card-content">
+                                <div className="level is-mobile">
+                                    <div className="level-left">
+                                        <div className="level-item has-text-centered">
                                             <a href="">
-                                                <i class="material-icons">favorite_border</i>
+                                                <i className="material-icons">favorite_border</i>
                                             </a>
                                         </div>
-                                        <div class="level-item has-text-centered">
+                                        <div className="level-item has-text-centered">
                                             <div>
                                                 <a href="">
-                                                    <i class="material-icons">chat_bubble_outline</i>
+                                                    <i className="material-icons">chat_bubble_outline</i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="content">
+                                <div className="content">
                                     <p>
                                         <strong>32 Likes</strong>
                                     </p>
@@ -170,63 +170,63 @@ class InstaAlbum extends Component {
                                     <a href="#">#css</a>
                                     <a href="#">#responsive</a>
                                     <br />
-                                    <time datetime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
+                                    <time dateTime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="columns is-mobile">
-                                    <div class="column is-11">
-                                        <div class="field">
-                                            <div class="control">
-                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
+                            <div className="card-footer">
+                                <div className="columns is-mobile">
+                                    <div className="column is-11">
+                                        <div className="field">
+                                            <div className="control">
+                                                <input className="input is-medium" type="text" placeholder="Add a comment . . ." />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column has-text-centered">
-                                        <button class="button">
-                                            <i class="material-icons">more_horiz</i>
+                                    <div className="column has-text-centered">
+                                        <button className="button">
+                                            <i className="material-icons">more_horiz</i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-48x48">
+                        <div className="card">
+                            <div className="header">
+                                <div className="media">
+                                    <div className="media-left">
+                                        <figure className="image is-48x48">
                                             <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
                                         </figure>
                                     </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">John Smith</p>
-                                        <p class="subtitle is-6">@johnsmith</p>
+                                    <div className="media-content">
+                                        <p className="title is-4">John Smith</p>
+                                        <p className="subtitle is-6">@johnsmith</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-image">
-                                <figure class="image is-4by3">
+                            <div className="card-image">
+                                <figure className="image is-4by3">
                                     <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
                                 </figure>
                             </div>
-                            <div class="card-content">
-                                <div class="level is-mobile">
-                                    <div class="level-left">
-                                        <div class="level-item has-text-centered">
+                            <div className="card-content">
+                                <div className="level is-mobile">
+                                    <div className="level-left">
+                                        <div className="level-item has-text-centered">
                                             <a href="">
-                                                <i class="material-icons">favorite_border</i>
+                                                <i className="material-icons">favorite_border</i>
                                             </a>
                                         </div>
-                                        <div class="level-item has-text-centered">
+                                        <div className="level-item has-text-centered">
                                             <div>
                                                 <a href="">
-                                                    <i class="material-icons">chat_bubble_outline</i>
+                                                    <i className="material-icons">chat_bubble_outline</i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="content">
+                                <div className="content">
                                     <p>
                                         <strong>32 Likes</strong>
                                     </p>
@@ -235,57 +235,57 @@ class InstaAlbum extends Component {
                                     <a href="#">#css</a>
                                     <a href="#">#responsive</a>
                                     <br />
-                                    <time datetime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
+                                    <time dateTime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="columns is-mobile">
-                                    <div class="column is-11">
-                                        <div class="field">
-                                            <div class="control">
-                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
+                            <div className="card-footer">
+                                <div className="columns is-mobile">
+                                    <div className="column is-11">
+                                        <div className="field">
+                                            <div className="control">
+                                                <input className="input is-medium" type="text" placeholder="Add a comment . . ." />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column has-text-centered">
-                                        <button class="button">
-                                            <i class="material-icons">more_horiz</i>
+                                    <div className="column has-text-centered">
+                                        <button className="button">
+                                            <i className="material-icons">more_horiz</i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-48x48">
+                        <div className="card">
+                            <div className="header">
+                                <div className="media">
+                                    <div className="media-left">
+                                        <figure className="image is-48x48">
                                             <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
                                         </figure>
                                     </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">John Smith</p>
-                                        <p class="subtitle is-6">@johnsmith</p>
+                                    <div className="media-content">
+                                        <p className="title is-4">John Smith</p>
+                                        <p className="subtitle is-6">@johnsmith</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-image">
-                                <figure class="image is-4by3">
+                            <div className="card-image">
+                                <figure className="image is-4by3">
                                     <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
                                 </figure>
                             </div>
-                            <div class="card-content">
-                                <div class="level is-mobile">
-                                    <div class="level-left">
-                                        <div class="level-item has-text-centered">
+                            <div className="card-content">
+                                <div className="level is-mobile">
+                                    <div className="level-left">
+                                        <div className="level-item has-text-centered">
                                             <a href="">
-                                                <i class="material-icons">favorite_border</i>
+                                                <i className="material-icons">favorite_border</i>
                                             </a>
                                         </div>
-                                        <div class="level-item has-text-centered">
+                                        <div className="level-item has-text-centered">
                                             <div>
                                                 <a href="">
-                                                    <i class="material-icons">chat_bubble_outline</i>
+                                                    <i className="material-icons">chat_bubble_outline</i>
                                                 </a>
                                             </div>
                                         </div>
@@ -293,7 +293,7 @@ class InstaAlbum extends Component {
                                 </div>
 
 
-                                <div class="content">
+                                <div className="content">
                                     <p>
                                         <strong>32 Likes</strong>
                                     </p>
@@ -302,30 +302,30 @@ class InstaAlbum extends Component {
                                     <a href="#">#css</a>
                                     <a href="#">#responsive</a>
                                     <br />
-                                    <time datetime="2018-1-1">12: 02 PM - 1 May 2018</time>
+                                    <time dateTime="2018-1-1">12: 02 PM - 1 May 2018</time>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="columns is-mobile">
-                                    <div class="column is-11">
-                                        <div class="field">
-                                            <div class="control">
-                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
+                            <div className="card-footer">
+                                <div className="columns is-mobile">
+                                    <div className="column is-11">
+                                        <div className="field">
+                                            <div className="control">
+                                                <input className="input is-medium" type="text" placeholder="Add a comment . . ." />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column has-text-centered">
-                                        <button class="button">
-                                            <i class="material-icons">more_horiz</i>
+                                    <div className="column has-text-centered">
+                                        <button className="button">
+                                            <i className="material-icons">more_horiz</i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         {displayInstaList}
-                        <footer class="footer">
-                            <div class="container is-fluid">
-                                <div class="content has-text-centered">
+                        <footer className="footer">
+                            <div className="container is-fluid">
+                                <div className="content has-text-centered">
                                     <p>
                                         <strong>Bulma</strong> by
                                         <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
