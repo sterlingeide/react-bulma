@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Forum.css';
+// import axios from 'axios';
 
 const comment = {
     message: 'I love coding. All day long',
@@ -56,7 +57,59 @@ const displayCommentList = commentList.map((c, idx) => {
     );
 })
 
+
+
 class Forum extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { rockets: [] };
+    // }
+    // componentDidMount() {
+    //     axios.get('https://api.spacexdata.com/v4/rockets')
+    //     .then(response => {
+    //         console.log(response.data);
+    //         this.setState({
+    //             rockets: response.data,
+    //         });
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     })
+    // }
+    // displayRockets() {
+    //     let displayRocketList = this.state.rockets.map((r, idx) => {
+    //     return (
+    //       <article className="post" key={idx}>
+    //         <h4>{r.name}</h4>
+    //         <div className="media">
+    //           <div className="media-left">
+    //             <p className="image is-32x32">
+    //               <img
+    //                 src="http://bulma.io/images/placeholders/128x128.png"
+    //                 alt=""
+    //               />
+    //             </p>
+    //           </div>
+    //           <div className="media-content">
+    //             <div className="content">
+    //               <p>
+    //               <a href={r.wikipedia} target="_blank">View Rocket Wiki</a>
+    //                 <span className="tag">Rocket</span>
+    //               </p>
+    //             </div>
+    //           </div>
+    //           <div className="media-right">
+    //             <span className="has-text-grey-light">
+    //               <i className="fa fa-comments"></i> 1
+    //             </span>
+    //           </div>
+    //         </div>
+    //       </article>
+    //     );
+    //   });
+  
+    //   return displayRocketList;
+    // }
     render() {
         return (
             <div>
@@ -158,7 +211,7 @@ class Forum extends Component {
                                             <div className="content">
                                                 <p>
                                                     <a href="#">{comment.author}</a> replied 34 minutes ago &nbsp;
-                                                    <span className="tag">Question</span>
+                                                    <span className="tag" title="question" >Question</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -273,6 +326,7 @@ class Forum extends Component {
                                     </div>
                                 </article>
                                 {displayCommentList}
+                                {/* {this.displayRockets()} */}
                             </div>
                         </div>
                     </div>
