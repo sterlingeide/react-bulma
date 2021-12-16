@@ -13,6 +13,7 @@ import Login from './Login';
 import Contact from './Contact';
 import Absurd from './Absurd';
 import Forum from './Forum';
+import Cheatsheet from './Cheatsheet';
 
 // const student = {
 //   name: 'Bob',
@@ -200,7 +201,8 @@ class App extends Component {
         {/* <Login /> */}
         {/* <Contact /> */}
         {/* <Absurd /> */}
-        <Forum />
+        {/* <Forum /> */}
+        <Cheatsheet />
       </div>
     )
   }
