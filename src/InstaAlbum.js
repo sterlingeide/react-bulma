@@ -1,6 +1,95 @@
 import React, { Component } from 'react';
 import './InstaAlbum.css';
 
+const instaList = [
+    {
+        name: 'Sterling',
+        at: '@sterling',
+        likes: 25
+    },
+    {
+        name: 'Tom',
+        at: '@tom',
+        likes: 41
+    },
+    {
+        name: 'Jonathan',
+        at: '@jon',
+        likes: 12
+    }
+]
+
+const displayInstaList = instaList.map((c, idx) => {
+    return (
+        <div class="card" key={idx}>
+            <div class="header">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">{c.name}</p>
+                        <p class="subtitle is-6">{c.at}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="level is-mobile">
+                    <div class="level-left">
+                        <div class="level-item has-text-centered">
+                            <a href="">
+                                <i class="material-icons">favorite_border</i>
+                            </a>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <a href="">
+                                    <i class="material-icons">chat_bubble_outline</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>
+                        <strong>{c.likes} Likes</strong>
+                    </p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                    <a>@bulmaio</a>.
+                    <a href="#">#css</a>
+                    <a href="#">#responsive</a>
+                    <br />
+                    <time datetime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="columns is-mobile">
+                    <div class="column is-11">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column has-text-centered">
+                        <button class="button">
+                            <i class="material-icons">more_horiz</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+})
+
+
 
 class InstaAlbum extends Component {
     render() {
@@ -9,15 +98,15 @@ class InstaAlbum extends Component {
                 <div class="navbar is-inline-flex is-transparent">
                     <div class="navbar-brand">
                         <a class="navbar-item">
-                            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma"/>
+                            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma" />
                         </a>
                     </div>
                     <div class="navbar-menu">
                         <div class="navbar-item">
                             <div class="control has-icons-left">
-                                <input class="input is-small has-text-centered" type="text" placeholder="search"/>
-                                <span class ="icon is-left is-small">
-                                <i class ="material-icons">search</i>
+                                <input class="input is-small has-text-centered" type="text" placeholder="search" />
+                                <span class="icon is-left is-small">
+                                    <i class="material-icons">search</i>
                                 </span>
                             </div>
                         </div>
@@ -41,7 +130,7 @@ class InstaAlbum extends Component {
                                 <div class="media">
                                     <div class="media-left">
                                         <figure class="image is-48x48">
-                                            <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image"/>
+                                            <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
                                         </figure>
                                     </div>
                                     <div class="media-content">
@@ -52,7 +141,7 @@ class InstaAlbum extends Component {
                             </div>
                             <div class="card-image">
                                 <figure class="image is-4by3">
-                                    <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image"/>
+                                    <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
                                 </figure>
                             </div>
                             <div class="card-content">
@@ -80,7 +169,7 @@ class InstaAlbum extends Component {
                                     <a>@bulmaio</a>.
                                     <a href="#">#css</a>
                                     <a href="#">#responsive</a>
-                                    <br/>
+                                    <br />
                                     <time datetime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
                                 </div>
                             </div>
@@ -89,7 +178,7 @@ class InstaAlbum extends Component {
                                     <div class="column is-11">
                                         <div class="field">
                                             <div class="control">
-                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ."/>
+                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
                                             </div>
                                         </div>
                                     </div>
@@ -106,7 +195,7 @@ class InstaAlbum extends Component {
                                 <div class="media">
                                     <div class="media-left">
                                         <figure class="image is-48x48">
-                                            <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image"/>
+                                            <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
                                         </figure>
                                     </div>
                                     <div class="media-content">
@@ -117,7 +206,7 @@ class InstaAlbum extends Component {
                             </div>
                             <div class="card-image">
                                 <figure class="image is-4by3">
-                                    <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image"/>
+                                    <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
                                 </figure>
                             </div>
                             <div class="card-content">
@@ -145,7 +234,7 @@ class InstaAlbum extends Component {
                                     <a>@bulmaio</a>.
                                     <a href="#">#css</a>
                                     <a href="#">#responsive</a>
-                                    <br/>
+                                    <br />
                                     <time datetime="2018-1-1">11: 09 PM - 1 Jan 2018</time>
                                 </div>
                             </div>
@@ -154,7 +243,7 @@ class InstaAlbum extends Component {
                                     <div class="column is-11">
                                         <div class="field">
                                             <div class="control">
-                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ."/>
+                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +260,7 @@ class InstaAlbum extends Component {
                                 <div class="media">
                                     <div class="media-left">
                                         <figure class="image is-48x48">
-                                            <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image"/>
+                                            <img src="https://source.unsplash.com/random/96x96" alt="Placeholder image" />
                                         </figure>
                                     </div>
                                     <div class="media-content">
@@ -182,7 +271,7 @@ class InstaAlbum extends Component {
                             </div>
                             <div class="card-image">
                                 <figure class="image is-4by3">
-                                    <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image"/>
+                                    <img src="https://source.unsplash.com/random/1280x960" alt="Placeholder image" />
                                 </figure>
                             </div>
                             <div class="card-content">
@@ -212,7 +301,7 @@ class InstaAlbum extends Component {
                                     <a>@bulmaio</a>.
                                     <a href="#">#css</a>
                                     <a href="#">#responsive</a>
-                                    <br/>
+                                    <br />
                                     <time datetime="2018-1-1">12: 02 PM - 1 May 2018</time>
                                 </div>
                             </div>
@@ -221,7 +310,7 @@ class InstaAlbum extends Component {
                                     <div class="column is-11">
                                         <div class="field">
                                             <div class="control">
-                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ."/>
+                                                <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
                                             </div>
                                         </div>
                                     </div>
@@ -233,7 +322,7 @@ class InstaAlbum extends Component {
                                 </div>
                             </div>
                         </div>
-
+                        {displayInstaList}
                         <footer class="footer">
                             <div class="container is-fluid">
                                 <div class="content has-text-centered">

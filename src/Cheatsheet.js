@@ -23,7 +23,7 @@ const snippetList = [
 
 const displaySnippetList = snippetList.map((c, idx) => {
     return (
-        <div className="box">
+        <div className="box" key={idx}>
             <h4 id="const" className="title is-3">{c.name}</h4>
             <article className="message is-primary">
                 <span className="icon has-text-primary">
