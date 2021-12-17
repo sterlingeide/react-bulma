@@ -205,12 +205,12 @@ class App extends Component {
         {/* <Login /> */}
         {/* <Contact /> */}
         {/* <Absurd /> */}
-        {/* <Forum /> */}
+        <Forum />
         {/* <Cheatsheet /> */}
         {/* <InstaAlbum /> */}
         {/* <Hero /> */}
         {/* <Inbox /> */}
-        <Landing />
+        {/* <Landing /> */}
       </div>
     )
   }

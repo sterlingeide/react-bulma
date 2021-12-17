@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Forum.css';
+import Article from './Article';
 // import axios from 'axios';
 
 const comment = {
@@ -31,29 +32,35 @@ const commentList = [
 ]
 
 
+// const displayCommentList = commentList.map((c, idx) => {
+//     return (
+//         <article className="post" key={idx} >
+//             <h4>{c.message}</h4>
+//             <div className="media">
+//                 <div className="media-left">
+//                     <p className="image is-32x32">
+//                         <img src="http://bulma.io/images/placeholders/128x128.png" />
+//                     </p>
+//                 </div>
+//                 <div className="media-content">
+//                     <div className="content">
+//                         <p>
+//                             <a href="#">{c.author}</a> replied 34 minutes ago &nbsp;
+//                             <span className="tag">Question</span>
+//                         </p>
+//                     </div>
+//                 </div>
+//                 <div className="media-right">
+//                     <span className="has-text-grey-light"><i className="fa fa-comments"></i> 1</span>
+//                 </div>
+//             </div>
+//         </article>
+//     );
+// })
+
 const displayCommentList = commentList.map((c, idx) => {
     return (
-        <article className="post" key={idx} >
-            <h4>{c.message}</h4>
-            <div className="media">
-                <div className="media-left">
-                    <p className="image is-32x32">
-                        <img src="http://bulma.io/images/placeholders/128x128.png" />
-                    </p>
-                </div>
-                <div className="media-content">
-                    <div className="content">
-                        <p>
-                            <a href="#">{c.author}</a> replied 34 minutes ago &nbsp;
-                            <span className="tag">Question</span>
-                        </p>
-                    </div>
-                </div>
-                <div className="media-right">
-                    <span className="has-text-grey-light"><i className="fa fa-comments"></i> 1</span>
-                </div>
-            </div>
-        </article>
+        <Article key={idx} index={idx} message={c.message} person={c.author} />
     );
 })
 
@@ -110,6 +117,11 @@ class Forum extends Component {
   
     //   return displayRocketList;
     // }
+
+    intro() {
+        console.log('I am from the Forum component')
+    }
+
     render() {
         return (
             <div>
@@ -199,6 +211,9 @@ class Forum extends Component {
                         </div>
                         <div className="column is-9">
                             <div className="box content">
+                                {/* <Article index={99} message={comment.messge} person={comment.author} authorIntro={this.intro} /> */}
+                                <Article index={99} message={comment.messge} person={comment.author} />
+
                                 <article className="post">
                                     <h4>{comment.message}</h4>
                                     <div className="media">
