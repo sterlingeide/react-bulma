@@ -16,6 +16,7 @@ import Forum from './Forum';
 import Cheatsheet from './Cheatsheet';
 import InstaAlbum from './InstaAlbum';
 import Hero from './Hero';
+import Inbox from './Inbox';
 
 // const student = {
 //   name: 'Bob',
@@ -206,7 +207,8 @@ class App extends Component {
         {/* <Forum /> */}
         {/* <Cheatsheet /> */}
         {/* <InstaAlbum /> */}
-        <Hero />
+        {/* <Hero /> */}
+        <Inbox />
       </div>
     )
   }
