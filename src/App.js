@@ -15,6 +15,7 @@ import Absurd from './Absurd';
 import Forum from './Forum';
 import Cheatsheet from './Cheatsheet';
 import InstaAlbum from './InstaAlbum';
+import Hero from './Hero';
 
 // const student = {
 //   name: 'Bob',
@@ -204,7 +205,8 @@ class App extends Component {
         {/* <Absurd /> */}
         {/* <Forum /> */}
         {/* <Cheatsheet /> */}
-        <InstaAlbum />
+        {/* <InstaAlbum /> */}
+        <Hero />
       </div>
     )
   }
