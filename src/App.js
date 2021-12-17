@@ -205,8 +205,8 @@ class App extends Component {
         {/* <Login /> */}
         {/* <Contact /> */}
         {/* <Absurd /> */}
-        <Forum />
-        {/* <Cheatsheet /> */}
+        {/* <Forum /> */}
+        <Cheatsheet />
         {/* <InstaAlbum /> */}
         {/* <Hero /> */}
         {/* <Inbox /> */}

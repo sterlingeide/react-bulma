@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Cheatsheet.css';
 import './Prism.css';
+import Snippet from './Snippet';
 
 
 const snippetList = [
@@ -21,20 +22,26 @@ const snippetList = [
     },
 ]
 
+// const displaySnippetList = snippetList.map((c, idx) => {
+//     return (
+//         <div className="box" key={idx}>
+//             <h4 id="const" className="title is-3">{c.name}</h4>
+//             <article className="message is-primary">
+//                 <span className="icon has-text-primary">
+//                     <i className="fab fa-js"></i>
+//                 </span>
+//                 <div className="message-body">
+//                     {c.properties}
+//                 </div>
+//             </article>
+//             <pre><code className="language-javascript">{c.example}</code></pre>
+//         </div>
+//     );
+// })
+
 const displaySnippetList = snippetList.map((c, idx) => {
     return (
-        <div className="box" key={idx}>
-            <h4 id="const" className="title is-3">{c.name}</h4>
-            <article className="message is-primary">
-                <span className="icon has-text-primary">
-                    <i className="fab fa-js"></i>
-                </span>
-                <div className="message-body">
-                    {c.properties}
-                </div>
-            </article>
-            <pre><code className="language-javascript">{c.example}</code></pre>
-        </div>
+        <Snippet key={idx} index={idx} name={c.name} properties={c.properties} example={c.example} />
     );
 })
 
