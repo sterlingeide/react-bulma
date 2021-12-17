@@ -17,6 +17,7 @@ import Cheatsheet from './Cheatsheet';
 import InstaAlbum from './InstaAlbum';
 import Hero from './Hero';
 import Inbox from './Inbox';
+import Landing from './Landing';
 
 // const student = {
 //   name: 'Bob',
@@ -208,7 +209,8 @@ class App extends Component {
         {/* <Cheatsheet /> */}
         {/* <InstaAlbum /> */}
         {/* <Hero /> */}
-        <Inbox />
+        {/* <Inbox /> */}
+        <Landing />
       </div>
     )
   }
